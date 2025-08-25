@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Starting database seeding...');
+  console.log('🌱 Starting Bitshub database seeding...');
 
   // Create store roles
   const storeRoles = ['OWNER', 'ATTENDANT', 'MANAGER'];

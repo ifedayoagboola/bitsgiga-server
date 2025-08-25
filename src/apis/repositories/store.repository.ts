@@ -1,4 +1,5 @@
-import { AddressBook, PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
+import { AddressBook } from '@src/interfaces/addressBook';
 import { UnprocessableEntityError } from '@src/common/errors';
 import { Store, StorePayload } from '../../interfaces/store';
 import { IStatus } from '@src/interfaces/generals';

@@ -1,4 +1,5 @@
-import { PrismaClient, Processor } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
+import { Processor } from '@src/interfaces/processors';
 
 const prisma = new PrismaClient();
 

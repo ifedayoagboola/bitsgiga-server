@@ -1,4 +1,4 @@
-import { ProductVariant } from '@prisma/client';
+import { ProductVariant } from '@src/interfaces/product';
 import { fetchAllCategoriesRepo, findCategoryRepo } from '@src/apis/repositories/categories.repository';
 import { findStoreRepo } from '@src/apis/repositories/store.repository';
 import { STATUS } from '@src/constants/store.constant';
