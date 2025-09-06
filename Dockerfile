@@ -37,6 +37,8 @@ COPY --from=build /app/dist ./dist
 COPY --from=deps /app/node_modules/.prisma ./node_modules/.prisma
 COPY --from=deps /app/node_modules/@prisma ./node_modules/@prisma
 
+COPY --from=build /app/prisma ./prisma
+
 EXPOSE 3210
 HEALTHCHECK --interval=15s --timeout=3s --retries=5 \
   CMD node -e "fetch('http://127.0.0.1:' + (process.env.PORT||3210) + '/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
