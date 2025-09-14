@@ -79,8 +79,4 @@ app.use((err: any, req: express.Request, res: express.Response, _next: express.N
   });
 });
 
-app.get('/healthz', (_req, res) => {
-  res.status(200).json({ ok: true });
-});
-
 export default app;
