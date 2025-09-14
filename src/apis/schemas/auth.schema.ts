@@ -85,7 +85,7 @@ export const loginSchema = celebrate(
         'string.empty': `{{#label}} is not allowed to be empty`
       }),
       password: Joi.string().required().trim().min(6).max(25).messages({
-        'string.min': `{{#label}} should be a minimum of 8 characters`,
+        'string.min': `{{#label}} should be a minimum of 6 characters`,
         'string.max': `{{#label}} should be a maximum of 25 characters`,
         'string.empty': `{{#label}} is not allowed to be empty`
       })
