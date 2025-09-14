@@ -21,7 +21,7 @@ export const createBulkRepo = async (userData: Partial<User[]>): Promise<User[]>
   await prisma.user.createMany({
     data: userData
   });
-  return
+  return [];
 };
 
 export const findAuthUser = async (filters: Partial<User>): Promise<User | undefined> => {
