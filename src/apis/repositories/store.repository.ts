@@ -10,7 +10,7 @@ import { globalFilter } from '@src/constants';
 const prisma = new PrismaClient();
 
 export const createStoreRepo = async (storeDetails: StorePayload) => {
-  const { brand_name, description, state, city, street, phone_number } = storeDetails;
+  const { brand_name, description, state, city, street, phone_number, img_url } = storeDetails;
   
   return await prisma.$transaction(async (trx) => {
     // Create store
@@ -18,6 +18,7 @@ export const createStoreRepo = async (storeDetails: StorePayload) => {
       data: {
         brand_name,
         description,
+        img_url,
         user_id: storeDetails.user_id,
         status: storeDetails.status ? 'ACTIVE' : 'INACTIVE',
         slug: storeDetails.slug || brand_name.toLowerCase().replace(/\s+/g, '-')
