@@ -23,7 +23,7 @@ RUN npm run build
 ##### Stage: runtime (prod deps only) #####
 FROM node:20-bookworm-slim AS runtime
 WORKDIR /app
-ENV NODE_ENV=production PORT=3210
+ENV NODE_ENV=development PORT=3210
 
 # Prod deps only
 COPY package*.json ./

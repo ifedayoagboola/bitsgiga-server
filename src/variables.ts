@@ -97,6 +97,15 @@ const variables = {
     }
   },
 
+  storage: {
+    r2: {
+      bucket: process.env.R2_BUCKET
+    },
+    upload: {
+      allowedMime: (process.env.UPLOAD_ALLOWED_MIME || '').split(',').filter(Boolean)
+    }
+  },
+
   pusher: {
     key: process.env.PUSHER_KEY,
     appId: process.env.PUSHER_APP_ID,

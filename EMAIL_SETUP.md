@@ -65,7 +65,7 @@ After setting up the environment variables:
 1. **Restart your server** to load the new environment variables
 2. **Test the configuration** by calling:
    ```
-   GET http://localhost:3210/v1/dev/store/test-email-config
+   GET https://api-dev.bitsgiga.com/v1/dev/store/test-email-config
    ```
 3. **Create a test store** to see if emails are sent
 

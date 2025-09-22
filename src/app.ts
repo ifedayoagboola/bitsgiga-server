@@ -9,7 +9,6 @@ import { v1Router } from '@src/apis/routes';
 import variables from './variables';
 
 const app = express();
-
 // Configure CORS to explicitly allow known dashboards and handle credentials
 const allowedOrigins = [
   variables.app.clientUrl,
@@ -52,8 +51,9 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res) =>
   res.json({
     status: 'success',
-    message: 'Ecommerce server response',
-    data: null
+    message: 'Ecommerce server response (develop branch)',
+    data: null,
+    baseRouter: variables.app.baseRouter
   })
 );
 

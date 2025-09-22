@@ -18,7 +18,7 @@ export const registerUserSchema = celebrate(
         'string.max': `{{#label}} should be a maximum of 25 characters`,
         'string.empty': `{{#label}} is not allowed to be empty`
       }),
-      phone_number: Joi.string().trim()
+      phone_number: Joi.string().trim().optional()
     })
   },
   {
@@ -65,9 +65,8 @@ export const updateUserSchema = celebrate(
         'string.email': `{{#label}} should be a valid email`,
         'string.empty': `{{#label}} is not allowed to be empty`
       }),
-      phone_number: Joi.string().trim(),
+      phone_number: Joi.string().trim().optional(),
       img_url: Joi.string().trim(),
-      mobile: Joi.string().trim(),
       profile_cover_img: Joi.string().trim(),
       sex: Joi.string().trim()
     })
@@ -85,7 +84,7 @@ export const loginSchema = celebrate(
         'string.empty': `{{#label}} is not allowed to be empty`
       }),
       password: Joi.string().required().trim().min(6).max(25).messages({
-        'string.min': `{{#label}} should be a minimum of 8 characters`,
+        'string.min': `{{#label}} should be a minimum of 6 characters`,
         'string.max': `{{#label}} should be a maximum of 25 characters`,
         'string.empty': `{{#label}} is not allowed to be empty`
       })
